@@ -1,0 +1,25 @@
+# Ignore all .log, .lnk and .txt files
+*.log
+*.Log
+*.LOG
+*.lnk
+*.Lnk
+*.LNK
+*.txt
+*.Txt
+*.TXT
+
+# Ignore the /output and /legacy folders
+/output/
+/Output/
+/OUTPUT/
+
+# Ignore the /logfiles folder
+/legacy/
+/Legacy/
+/LEGACY/
+
+# Ignore the /links folder
+/links/
+/Links/
+/LINKS/

@@ -23,3 +23,8 @@
 **/links/
 **/Links/
 **/LINKS/
+
+# Ignore the /resources folder in any subdirectory
+**/resources/
+**/Resources/
+**/RESOURCES/

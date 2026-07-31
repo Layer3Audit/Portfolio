@@ -1,0 +1,78 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260413202146
+Username: CORP\Administrator
+RunAs User: CORP\Administrator
+Configuration Name: 
+Machine: WORKSTATION1 (Microsoft Windows NT 10.0.17763.0)
+Host Application: powershell -ExecutionPolicy Bypass -File D:\Scripts\Shutdown\vCenter_Hosts_Shutdown.ps1
+Process ID: 824
+PSVersion: 5.1.17763.8510
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.8510
+BuildVersion: 10.0.17763.8510
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\Scripts\Shutdown\vCenter_Hosts_Shutdown.txt
+
+Connecting to vCenter Server
+
+Gracefully shutting down or powering off VMs
+Attempting graceful shutdown of Windows 11 Professional...
+
+State          IPAddress            OSFullName
+-----          ---------            ----------
+Running        {192.168.100.73}      Microsoft Windows 11 (64-bit)
+Waiting for Windows 11 Professional to shut down...
+
+Shutting down host: esx2.contoso.com.au
+
+ServerId        : /VIServer=contoso.com.au\administrator@vcsa1.contoso.com.au:443/
+State           : Running
+IsCancelable    : False
+PercentComplete : 0
+StartTime       : 4/13/2026 8:21:55 PM
+FinishTime      :
+ObjectId        : HostSystem-host-20001
+Result          :
+Description     : Initiate host shutdown
+ExtensionData   : VMware.Vim.Task
+Id              : Task-task-117011
+Name            : ShutdownHost_Task
+Uid             : /VIServer=contoso.com.au\administrator@vcsa1.contoso.com.au:443/Task=Task-task-117011/
+CmdletTaskInfo  :
+
+
+Disconnecting from vCenter Server
+
+Connecting to host: esx1.contoso.com.au
+
+Shutting down the vCenter Server
+Waiting for server to shut down...
+ShuttingDown   {192.168.100.4}       VMware Photon OS (64-bit)
+
+Shutting down host: esx1.contoso.com.au
+
+ServerId        : /VIServer=root@esx1.contoso.com.au:443/
+State           : Running
+IsCancelable    : False
+PercentComplete : 0
+StartTime       : 4/13/2026 8:28:06 PM
+FinishTime      :
+ObjectId        : HostSystem-ha-host
+Result          :
+Description     : Initiate host shutdown
+ExtensionData   : VMware.Vim.Task
+Id              : Task-haTask-ha-host-vim.HostSystem.shutdown-608
+Name            : ShutdownHost_Task
+Uid             : /VIServer=root@esx1.contoso.com.au:443/Task=Task-haTask-ha-host-vim.HostSystem.shutdown-608/
+CmdletTaskInfo  :
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20260413202205
+**********************

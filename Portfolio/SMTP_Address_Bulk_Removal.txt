@@ -1,0 +1,107 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20220328151224
+Username: CORP\admin
+RunAs User: CORP\admin
+Machine: WORKSTATION1 (Microsoft Windows NT 6.3.9600.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command . 'C:\Program Files\Microsoft\Exchange Server\bin\RemoteExchange.ps1'; Connect-ExchangeServer -auto -ClientApplication:ManagementShell
+Process ID: 3304
+**********************
+Transcript started, output file is C:\temp\Scripts\SMTP_Address_Bulk_Removal\SMTP_Address_Bulk_Removal.txt
+
+Removing smtp:userA@internal3.local from userA Account Mailbox
+Removing smtp:userB@internal3.local from userB Account Mailbox
+Mailbox SMTP addresses:
+
+
+AddressString      : /o=Contoso/ou=Exchange Administrative Group
+                     (xxDIBOHFXXXXXXX)/cn=Recipients/cn=a9d587d371e8471f914b1ff6d7f605d5-userA
+ProxyAddressString : X500:/o=Contoso/ou=Exchange Administrative Group
+                     (xxDIBOHFXXXXXXX)/cn=Recipients/cn=a9d587d371e8471f914b1ff6d7f605d5-userA
+Prefix             : X500
+IsPrimaryAddress   : True
+PrefixString       : X500
+
+AddressString      : /o=ExchangeLabs/ou=Exchange Administrative Group
+                     (xxDIBOHFXXXXXXX)/cn=Recipients/cn=6b8b19b104ac4b93acb3d22d18176796-userB
+ProxyAddressString : x500:/o=ExchangeLabs/ou=Exchange Administrative Group
+                     (xxDIBOHFXXXXXXX)/cn=Recipients/cn=6b8b19b104ac4b93acb3d22d18176796-userB
+Prefix             : X500
+IsPrimaryAddress   : False
+PrefixString       : x500
+
+SmtpAddress        : userA@internal1.local
+AddressString      : userA@internal1.local
+ProxyAddressString : smtp:userA@internal1.local
+Prefix             : SMTP
+IsPrimaryAddress   : False
+PrefixString       : smtp
+
+SmtpAddress        : userA@contoso.com.au
+AddressString      : userA@contoso.com.au
+ProxyAddressString : smtp:userA@contoso.com.au
+Prefix             : SMTP
+IsPrimaryAddress   : False
+PrefixString       : smtp
+
+SmtpAddress        : userA@internal2.local
+AddressString      : userA@internal2.local
+ProxyAddressString : smtp:userA@internal2.local
+Prefix             : SMTP
+IsPrimaryAddress   : False
+PrefixString       : smtp
+
+SmtpAddress        : userA@internal3.local
+AddressString      : userA@internal3.local
+ProxyAddressString : smtp:userA@internal3.local
+Prefix             : SMTP
+IsPrimaryAddress   : False
+PrefixString       : smtp
+
+SmtpAddress        : userA@azure.mail.onmicrosoft.com
+AddressString      : userA@azure.mail.onmicrosoft.com
+ProxyAddressString : smtp:userA@azure.mail.onmicrosoft.com
+Prefix             : SMTP
+IsPrimaryAddress   : False
+PrefixString       : smtp
+
+SmtpAddress        : userB@internal1.local
+AddressString      : userB@internal1.local
+ProxyAddressString : smtp:userB@internal1.local
+Prefix             : SMTP
+IsPrimaryAddress   : False
+PrefixString       : smtp
+
+SmtpAddress        : userB@contoso.com.au
+AddressString      : userB@contoso.com.au
+ProxyAddressString : SMTP:userB@contoso.com.au
+Prefix             : SMTP
+IsPrimaryAddress   : True
+PrefixString       : SMTP
+
+SmtpAddress        : userB@internal2.local
+AddressString      : userB@internal2.local
+ProxyAddressString : smtp:userB@internal2.local
+Prefix             : SMTP
+IsPrimaryAddress   : False
+PrefixString       : smtp
+
+SmtpAddress        : userB@internal3.local
+AddressString      : userB@internal3.local
+ProxyAddressString : smtp:userB@internal3.local
+Prefix             : SMTP
+IsPrimaryAddress   : False
+PrefixString       : smtp
+
+SmtpAddress        : userB@azure.mail.onmicrosoft.com
+AddressString      : userB@azure.mail.onmicrosoft.com
+ProxyAddressString : smtp:userB@azure.mail.onmicrosoft.com
+Prefix             : SMTP
+IsPrimaryAddress   : False
+PrefixString       : smtp
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20220328151225
+**********************

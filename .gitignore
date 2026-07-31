@@ -5,9 +5,6 @@
 **/*.lnk
 **/*.Lnk
 **/*.LNK
-**/*.txt
-**/*.Txt
-**/*.TXT
 
 # Ignore the /output folder in any subdirectory
 **/output/
@@ -28,3 +25,6 @@
 **/resources/
 **/Resources/
 **/RESOURCES/
+**/original
+**/Original
+**/ORIGINAL

@@ -1,0 +1,86 @@
+﻿Time                Source IP         Destination IP    Description                        Status    Latency (ms)
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+26/04/01 07:51:28   10.10.15.1        192.168.50.1      Domain Controller                  Online    3 ms
+26/04/01 07:51:29   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    1525 ms
+26/04/01 07:51:29   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    14 ms
+26/04/01 07:51:29   10.10.15.1        8.8.8.8           Google DNS                         Online    2 ms
+26/04/01 11:11:09   10.10.15.1        192.168.50.1      Domain Controller                  Online    1785 ms
+26/04/01 11:11:09   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    3 ms
+26/04/01 11:11:09   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    14 ms
+26/04/01 11:11:09   10.10.15.1        8.8.8.8           Google DNS                         Online    2 ms
+26/04/01 11:57:26   10.10.15.1        192.168.50.1      Domain Controller                  Offline   -
+26/04/01 11:57:30   10.10.15.1        10.10.101.1       Web Proxy Server                   Offline   -
+26/04/01 11:57:34   10.10.15.1        172.20.40.1       Mitel Server Manager               Offline   -
+26/04/01 11:57:37   10.10.15.1        8.8.8.8           Google DNS                         Online    2411 ms
+26/04/01 11:57:41   10.10.15.1        192.168.50.1      Domain Controller                  Online    2251 ms
+26/04/01 11:57:43   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    2092 ms
+26/04/01 11:57:46   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    2960 ms
+26/04/01 11:57:49   10.10.15.1        8.8.8.8           Google DNS                         Online    2747 ms
+26/04/01 11:57:53   10.10.15.1        192.168.50.1      Domain Controller                  Online    2051 ms
+26/04/01 11:57:55   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    1345 ms
+26/04/01 11:57:56   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    1388 ms
+26/04/01 11:57:57   10.10.15.1        8.8.8.8           Google DNS                         Online    1466 ms
+26/04/01 11:58:16   10.10.15.1        192.168.50.1      Domain Controller                  Online    1625 ms
+26/04/01 11:58:18   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    2438 ms
+26/04/01 11:58:21   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    2545 ms
+26/04/01 11:58:24   10.10.15.1        8.8.8.8           Google DNS                         Online    2910 ms
+26/04/01 11:58:29   10.10.15.1        192.168.50.1      Domain Controller                  Offline   -
+26/04/01 11:58:33   10.10.15.1        10.10.101.1       Web Proxy Server                   Offline   -
+26/04/01 11:58:37   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    3906 ms
+26/04/01 11:58:41   10.10.15.1        8.8.8.8           Google DNS                         Offline   -
+26/04/01 11:58:46   10.10.15.1        192.168.50.1      Domain Controller                  Online    2882 ms
+26/04/01 11:58:49   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    2921 ms
+26/04/01 11:58:52   10.10.15.1        172.20.40.1       Mitel Server Manager               Offline   -
+26/04/01 11:58:53   10.10.15.1        8.8.8.8           Google DNS                         Online    709 ms
+26/04/01 11:58:58   10.10.15.1        192.168.50.1      Domain Controller                  Online    2289 ms
+26/04/01 11:59:00   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    2347 ms
+26/04/01 11:59:02   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    2198 ms
+26/04/01 11:59:04   10.10.15.1        8.8.8.8           Google DNS                         Online    1685 ms
+26/04/01 11:59:07   10.10.15.1        192.168.50.1      Domain Controller                  Online    1536 ms
+26/04/01 11:59:09   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    1661 ms
+26/04/01 11:59:12   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    2408 ms
+26/04/01 11:59:14   10.10.15.1        8.8.8.8           Google DNS                         Online    2377 ms
+26/04/01 12:02:51   10.10.15.1        192.168.50.1      Domain Controller                  Online    1794 ms
+26/04/01 12:02:54   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    3021 ms
+26/04/01 12:02:56   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    2354 ms
+26/04/01 12:02:56   10.10.15.1        8.8.8.8           Google DNS                         Online    48 ms
+26/04/01 12:03:02   10.10.15.1        192.168.50.1      Domain Controller                  Online    2061 ms
+26/04/01 12:03:02   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    3 ms
+26/04/01 12:03:02   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    14 ms
+26/04/01 12:03:02   10.10.15.1        8.8.8.8           Google DNS                         Online    2 ms
+26/04/01 12:06:28   10.10.15.1        192.168.50.1      Domain Controller                  Online    1976 ms
+26/04/01 12:06:29   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    1770 ms
+26/04/01 12:06:30   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    1064 ms
+26/04/01 12:06:31   10.10.15.1        8.8.8.8           Google DNS                         Online    307 ms
+26/04/01 12:06:35   10.10.15.1        192.168.50.1      Domain Controller                  Online    2445 ms
+26/04/01 12:06:38   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    2953 ms
+26/04/01 12:06:40   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    2168 ms
+26/04/01 12:06:42   10.10.15.1        8.8.8.8           Google DNS                         Online    1474 ms
+26/04/01 12:11:19   10.10.15.1        192.168.50.1      Domain Controller                  Online    2214 ms
+26/04/01 12:11:22   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    3124 ms
+26/04/01 12:11:25   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    2782 ms
+26/04/01 12:11:27   10.10.15.1        8.8.8.8           Google DNS                         Online    2143 ms
+26/04/01 12:11:32   10.10.15.1        192.168.50.1      Domain Controller                  Online    3030 ms
+26/04/01 12:11:35   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    3104 ms
+26/04/01 12:11:39   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    3660 ms
+26/04/01 12:11:42   10.10.15.1        8.8.8.8           Google DNS                         Online    2896 ms
+26/04/01 12:11:46   10.10.15.1        192.168.50.1      Domain Controller                  Online    1906 ms
+26/04/01 12:11:48   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    1977 ms
+26/04/01 12:11:50   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    2111 ms
+26/04/01 12:11:52   10.10.15.1        8.8.8.8           Google DNS                         Online    2117 ms
+26/04/01 12:11:56   10.10.15.1        192.168.50.1      Domain Controller                  Online    1355 ms
+26/04/01 12:11:58   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    2089 ms
+26/04/01 12:12:00   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    2110 ms
+26/04/01 12:12:02   10.10.15.1        8.8.8.8           Google DNS                         Online    1890 ms
+26/04/01 14:46:25   10.10.15.1        192.168.50.1      Domain Controller                  Online    2754 ms
+26/04/01 14:46:25   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    5 ms
+26/04/01 14:46:25   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    14 ms
+26/04/01 14:46:25   10.10.15.1        8.8.8.8           Google DNS                         Online    2 ms
+26/04/01 15:11:27   10.10.15.1        192.168.50.1      Domain Controller                  Online    3489 ms
+26/04/01 15:11:27   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    4 ms
+26/04/01 15:11:27   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    14 ms
+26/04/01 15:11:27   10.10.15.1        8.8.8.8           Google DNS                         Online    2 ms
+26/04/01 17:51:37   10.10.15.1        192.168.50.1      Domain Controller                  Online    2008 ms
+26/04/01 17:51:37   10.10.15.1        10.10.101.1       Web Proxy Server                   Online    4 ms
+26/04/01 17:51:37   10.10.15.1        172.20.40.1       Mitel Server Manager               Online    14 ms
+26/04/01 17:51:37   10.10.15.1        8.8.8.8           Google DNS                         Online    2 ms

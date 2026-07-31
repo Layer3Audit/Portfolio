@@ -1,0 +1,269 @@
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Sunday, 19 April 2026 7:46:55 PM
+   Source : D:\Users\
+     Dest : H:\Users\
+
+    Files : *.*
+	    
+Exc Files : UsrClass.*
+	    WebCacheLock.*
+	    ntuser.*
+	    
+ Exc Dirs : D:\Users\User\.asdm
+	    D:\Users\User\.ms-ad
+	    D:\Users\User\.vscode
+	    
+  Options : *.* /BYTES /NDL /NFL /L /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /NP /R:1 /W:1 
+
+------------------------------------------------------------------------------
+
+	  *EXTRA File 		    3945	H:\Users\User\Setup Guide In-Editor Tutorial\Assets\Materials\Material_Moon.mat
+	  *EXTRA File 		     188	H:\Users\User\Setup Guide In-Editor Tutorial\Assets\Materials\Material_Moon.mat.meta
+	  *EXTRA File 		   36323	H:\Users\User\Setup Guide In-Editor Tutorial\Logs\shadercompiler-UnityShaderCompiler.exe-12.log
+	  *EXTRA File 		   31346	H:\Users\User\Setup Guide In-Editor Tutorial\Logs\shadercompiler-UnityShaderCompiler.exe-13.log
+	  *EXTRA File 		   27076	H:\Users\User\AppData\Local\Spotify\Default\Cache\Cache_Data\f_00001f
+	  *EXTRA File 		   26233	H:\Users\User\AppData\Local\Spotify\Default\Cache\Cache_Data\f_000021
+	  *EXTRA File 		   30160	H:\Users\User\AppData\Local\Spotify\Default\Cache\Cache_Data\f_000022
+	  *EXTRA File 		   35889	H:\Users\User\AppData\Local\Spotify\Default\Cache\Cache_Data\f_000024
+
+------------------------------------------------------------------------------
+
+                 Total      Copied     Skipped  Mismatch    FAILED     Extras
+    Dirs :        5901        2392        3509         0         0       2303
+   Files :       35174       16266       18908         0         0      30474
+   Bytes : 53757655417 12980016822 40777638595         0         0 4730136771
+   Times :     0:00:24     0:00:00                         0:00:00    0:00:24
+   Ended : Sunday, 19 April 2026 7:47:19 PM
+
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Sunday, 19 April 2026 7:47:33 PM
+   Source : D:\Temp\
+     Dest : H:\Temp\
+
+    Files : *.*
+	    
+  Options : *.* /BYTES /NDL /NFL /L /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /NP /R:1 /W:1 
+
+------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+
+                Total     Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :       3272       3234        38         0         0         0
+   Files :      22084      21975       109         0         0         0
+   Bytes : 1615574534 1038100706 577473828         0         0         0
+   Times :    0:00:00    0:00:00                       0:00:00   0:00:00
+   Ended : Sunday, 19 April 2026 7:47:33 PM
+
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Sunday, 19 April 2026 7:47:33 PM
+   Source : D:\GAMING\
+     Dest : H:\GAMING\
+
+    Files : *.*
+	    
+ Exc Dirs : D:\Users\User\.asdm
+	    D:\Users\User\.ms-ad
+	    D:\Users\User\.vscode
+
+	    
+  Options : *.* /BYTES /NDL /NFL /L /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /NP /R:1 /W:1 
+
+------------------------------------------------------------------------------
+
+	  *EXTRA File 		50936580	H:\GAMING\Savegame Backups\SaveGames Backup Legacy.zip
+	  *EXTRA File 		50936580	H:\GAMING\Savegame Backups\Modified Saves\SaveGames Backup Legacy.zip
+
+------------------------------------------------------------------------------
+
+                  Total       Copied      Skipped  Mismatch    FAILED     Extras
+    Dirs :        25869          419        25450         0         0        188
+   Files :       245611         8948       236663         0         0       1484
+   Bytes : 514974477603 168952316666 346022160937         0         0 2185300858
+   Times :      0:02:17      0:00:00                          0:00:00    0:02:17
+   Ended : Sunday, 19 April 2026 7:49:51 PM
+
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Sunday, 19 April 2026 7:49:52 PM
+   Source : D:\PERSONAL\
+     Dest : H:\PERSONAL\
+
+    Files : *.*
+	    
+ Exc Dirs : D:\Users\User\.asdm
+	    D:\Users\User\.ms-ad
+	    D:\Users\User\.vscode
+
+	    
+  Options : *.* /BYTES /NDL /NFL /L /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /NP /R:1 /W:1 
+
+------------------------------------------------------------------------------
+
+	  *EXTRA File 		 2648398	H:\PERSONAL\Rental Inspections\2023\Candidates\20231209\20231209_103025.jpg
+	  *EXTRA File 		 1937556	H:\PERSONAL\Rental Inspections\2023\Candidates\20231209\20231209_103028.jpg
+	  *EXTRA File 		 2260992	H:\PERSONAL\Rental Inspections\2023\Candidates\20231209\20231209_103036.jpg
+
+------------------------------------------------------------------------------
+
+                  Total       Copied      Skipped  Mismatch    FAILED     Extras
+    Dirs :         4204          977         3227         0         0        336
+   Files :        69359         8692        60667         0         0       1883
+   Bytes : 557129128155 232668624002 324460504153         0         0 3432463102
+   Times :      0:01:19      0:00:00                          0:00:00    0:01:19
+   Ended : Sunday, 19 April 2026 7:51:11 PM
+
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Sunday, 19 April 2026 7:51:12 PM
+   Source : Z:\SHARED\
+     Dest : H:\SHARED\
+
+    Files : *.*
+	    
+ Exc Dirs : D:\Users\User\.asdm
+	    D:\Users\User\.ms-ad
+	    D:\Users\User\.vscode
+
+	    
+  Options : *.* /BYTES /NDL /NFL /L /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /NP /R:1 /W:1 
+
+------------------------------------------------------------------------------
+
+	  *EXTRA File 		    2244	H:\SHARED\Knowledge\Review\Memory Reference Folders.md
+	  *EXTRA File 		     749	H:\SHARED\Knowledge\Review\Memory Reference Obsidian.md
+	  *EXTRA File 		     818	H:\SHARED\Knowledge\Review\_MOC Exercise.md
+	  *EXTRA File 		     297	H:\SHARED\Knowledge\Review\_MOC OpenWRT.md
+	  *EXTRA File 		     593	H:\SHARED\Knowledge\Review\_MOC Techology.md
+
+------------------------------------------------------------------------------
+
+                  Total       Copied      Skipped  Mismatch    FAILED     Extras
+    Dirs :        19217        14507         4710         0         0         15
+   Files :       253806       200262        53544         0         0         63
+   Bytes : 398125108749 277776829645 120348279104         0         0 2982596332
+   Times :      0:01:43      0:00:00                          0:00:00    0:01:43
+   Ended : Sunday, 19 April 2026 7:52:56 PM
+
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Sunday, 19 April 2026 7:52:56 PM
+   Source : D:\SYSTEM\
+     Dest : H:\SYSTEM\
+
+    Files : *.*
+	    
+ Exc Dirs : D:\Users\User\.asdm
+	    D:\Users\User\.ms-ad
+	    D:\Users\User\.vscode
+
+	    
+  Options : *.* /BYTES /NDL /NFL /L /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /NP /R:1 /W:1 
+
+------------------------------------------------------------------------------
+
+	  *EXTRA File 		  656147	H:\SYSTEM\Backups\Applications\OpenWRT\Openwrt VLAN.pdf
+	  *EXTRA File 		  837937	H:\SYSTEM\Backups\Applications\OpenWRT\Openwrt WAN.pdf
+	  *EXTRA File 		     158	H:\SYSTEM\Network\WiFi Testing.txt
+
+------------------------------------------------------------------------------
+
+                  Total      Copied     Skipped  Mismatch    FAILED    Extras
+    Dirs :          481           2         479         0         0         0
+   Files :        20277          13       20264         0         0         3
+   Bytes : 111006721450 88365187870 22641533580         0         0   1494242
+   Times :      0:00:04     0:00:00                         0:00:00   0:00:04
+   Ended : Sunday, 19 April 2026 7:53:01 PM
+
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Sunday, 19 April 2026 7:53:01 PM
+   Source : D:\WORK\
+     Dest : H:\WORK\
+
+    Files : *.*
+	    
+ Exc Dirs : D:\Users\User\.asdm
+	    D:\Users\User\.ms-ad
+	    D:\Users\User\.vscode
+
+	    
+  Options : *.* /BYTES /NDL /NFL /L /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /NP /R:1 /W:1 
+
+------------------------------------------------------------------------------
+
+	  *EXTRA File 		   37266	H:\WORK\Business\Container.7z
+
+------------------------------------------------------------------------------
+
+                  Total      Copied     Skipped  Mismatch    FAILED    Extras
+    Dirs :        12945         659       12286         0         0         0
+   Files :        80973       12002       68971         0         0         1
+   Bytes : 180325630908 90017198983 90308431925         0         0     37266
+   Times :      0:01:21     0:00:00                         0:00:00   0:01:21
+   Ended : Sunday, 19 April 2026 7:54:23 PM
+
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Sunday, 19 April 2026 7:54:23 PM
+   Source : V:\Plex Media Server\
+     Dest : H:\Plex Media Server\
+
+    Files : *.*
+	    
+  Options : *.* /BYTES /NDL /NFL /L /TEE /S /E /DCOPY:DA /COPY:DAT /PURGE /NP /R:1 /W:1 
+
+------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+
+                 Total      Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :           1           0         1         0         0         0
+   Files :           1           1         0         0         0         0
+   Bytes : 23628975138 23628975138         0         0         0         0
+   Times :     0:00:00     0:00:00                       0:00:00   0:00:00
+   Ended : Sunday, 19 April 2026 7:54:23 PM
+
+------------------------------------------------------------------------------
+DETAILED SIZE BREAKDOWN
+------------------------------------------------------------------------------
+"D:\Users" "H:\Users"                                                 50.07 GB
+"D:\Temp" "H:\Temp"                                                     1.5 GB
+"D:\GAMING" "H:\GAMING"                                              479.61 GB
+"D:\PERSONAL" "H:\PERSONAL"                                          518.87 GB
+"D:\SHARED" "H:\SHARED"                                              370.78 GB
+"D:\SYSTEM" "H:\SYSTEM"                                              103.38 GB
+"D:\WORK\" "H:\WORK\"                                                167.94 GB
+"V:\Plex Media Server" "H:\Plex Media Server"                         22.01 GB
+------------------------------------------------------------------------------
+Total data size (Size of all source folders):                       1714.16 GB
+Data to transfer (Data to be copied to the USB):                     833.93 GB
+------------------------------------------------------------------------------

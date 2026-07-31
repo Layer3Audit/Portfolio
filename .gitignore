@@ -1,7 +1,4 @@
-# Ignore all .log, .lnk and .txt files in any subdirectory
-**/*.log
-**/*.Log
-**/*.LOG
+# Ignore all specified files in any subdirectory
 **/*.lnk
 **/*.Lnk
 **/*.LNK

@@ -6,25 +6,22 @@
 **/*.Lnk
 **/*.LNK
 
-# Ignore the /output folder in any subdirectory
-**/output/
-**/Output/
-**/OUTPUT/
-
-# Ignore the /logfiles folder in any subdirectory
+# Ignore the specified folders in any subdirectory
+**/excluded/
+**/Excluded/
+**/EXCLUDED/
 **/legacy/
 **/Legacy/
 **/LEGACY/
-
-# Ignore the /links folder in any subdirectory
 **/links/
 **/Links/
 **/LINKS/
-
-# Ignore the /resources folder in any subdirectory
-**/resources/
-**/Resources/
-**/RESOURCES/
 **/original
 **/Original
 **/ORIGINAL
+**/output/
+**/Output/
+**/OUTPUT/
+**/resources/
+**/Resources/
+**/RESOURCES/

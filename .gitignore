@@ -1,9 +1,9 @@
-# Ignore all specified files in any subdirectory
+# Ignore all specified files in any sub-directory
 **/*.lnk
 **/*.Lnk
 **/*.LNK
 
-# Ignore the specified folders in any subdirectory
+# Ignore the specified folders in any sub-directory
 **/excluded/
 **/Excluded/
 **/EXCLUDED/

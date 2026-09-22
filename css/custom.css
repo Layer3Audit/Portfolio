@@ -1,0 +1,1093 @@
+/*!
+  * Item: Kitzu
+  * Description: Personal Portfolio Template
+  * Author/Developer: Exill
+  * Author/Developer URL: https://themeforest.net/user/exill
+  * Version: v2.0.1
+  * License: Themeforest Standard Licenses: https://themeforest.net/licenses
+  */
+
+/*----------- ADD YOUR CUSTOM CSS STYLES BELOW -----------*/
+
+/*----------- STRUCTURAL LAYOUT OVERRIDES -----------*/
+
+/* The original About lightbox is now the permanent Portfolio landing page. */
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.lightbox-wrapper.main-page {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+
+/*----------- PERSISTENT NAVIGATION -----------*/
+
+/* Keep the navbar above every content panel. */
+#navbar {
+  z-index: 10000;
+}
+
+/* Each section behaves like a full-page panel beneath the persistent navbar. */
+.lightbox-wrapper,
+.lightbox-wrapper.main-page {
+  height: 100%;
+  left: 0;
+  min-height: 100vh;
+  opacity: 0;
+  overflow-y: auto;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1;
+}
+
+/* The selected page is visible and fades in after the previous page fades out. */
+.lightbox-wrapper.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  z-index: 2;
+  transition: opacity .40s ease-in-out;
+}
+
+/* Keep the incoming page rendered at zero opacity while the old page fades away. */
+.lightbox-wrapper.is-transition-target {
+  opacity: 0;
+  pointer-events: none;
+  visibility: visible;
+  z-index: 2;
+}
+
+/* Fade the current page out before revealing the next one. */
+.lightbox-wrapper.is-active.is-fading-out {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease-in-out;
+}
+
+/* The old modal close button is no longer needed. */
+.lightbox-wrapper .lightbox-close {
+  display: none;
+}
+
+/* Leave room for the fixed navigation on the Portfolio landing page. */
+
+/*----------- DOCUMENTATION PDF GRID -----------*/
+
+.documentation-grid {
+  margin-bottom: 30px;
+}
+
+.document-card {
+  background-color: #171717;
+  border: 1px solid #2a2a2a;
+  display: block;
+  margin-bottom: 30px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.document-card:hover,
+.document-card:focus {
+  border-color: #555;
+  outline: none;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.document-preview {
+  align-items: center;
+  background-color: #e9e9e9;
+  display: flex;
+  height: 390px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.document-preview img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.document-open-hint {
+  background-color: rgba(0, 0, 0, .78);
+  bottom: 16px;
+  color: #fff;
+  font-size: 13px;
+  left: 50%;
+  opacity: 0;
+  padding: 8px 12px;
+  position: absolute;
+  transform: translate(-50%, 8px);
+  transition: opacity .2s ease, transform .2s ease;
+  white-space: nowrap;
+}
+
+.document-card:hover .document-open-hint,
+.document-card:focus .document-open-hint {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.document-info {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 72px;
+  padding: 18px 20px;
+}
+
+.document-title {
+  color: #f0f0f0;
+  font-size: 18px;
+  margin: 0;
+  padding-right: 20px;
+}
+
+.document-meta {
+  color: #8f8f8f;
+  flex: 0 0 auto;
+  font-size: 13px;
+}
+
+/*----------- PDF VIEWER -----------*/
+
+.pdf-viewer-modal {
+  align-items: center;
+  background-color: rgba(0, 0, 0, .88);
+  display: flex;
+  inset: 0;
+  opacity: 0;
+  padding: 88px 4vw 4vw;
+  pointer-events: none;
+  position: fixed;
+  transition: opacity .25s ease, visibility 0s linear .25s;
+  visibility: hidden;
+  z-index: 9999;
+}
+
+.pdf-viewer-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity .25s ease;
+  visibility: visible;
+}
+
+.pdf-viewer-dialog {
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 120px);
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.pdf-viewer-header {
+  align-items: center;
+  display: flex;
+  flex: 0 0 52px;
+  justify-content: space-between;
+  padding: 0 16px 0 20px;
+}
+
+.pdf-viewer-header h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.pdf-viewer-close {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 1;
+  padding: 4px 8px;
+}
+
+.pdf-viewer-close:focus {
+  outline: 1px solid #777;
+}
+
+.pdf-viewer-frame {
+  background-color: #fff;
+  border: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .document-preview {
+    height: 300px;
+  }
+
+  .document-info {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .document-title {
+    padding-right: 0;
+  }
+
+  .document-meta {
+    margin-top: 6px;
+  }
+
+  .pdf-viewer-modal {
+    padding: 76px 10px 10px;
+  }
+
+  .pdf-viewer-dialog {
+    height: calc(100vh - 86px);
+  }
+}
+
+
+/*----------- NETWORK DIAGRAM CARDS -----------*/
+
+.network-diagram-grid .single-item {
+  display: flex;
+}
+
+.network-diagram-card {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.network-diagram-info {
+  height: 118px;
+  padding: 0 2px 16px;
+}
+
+.network-diagram-title {
+  color: #f0f0f0;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.network-diagram-description {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: #9f9f9f;
+  display: -webkit-box;
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  overflow: hidden;
+}
+
+.network-diagram-link {
+  align-self: flex-start;
+  display: block;
+  margin-top: 0;
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .network-diagram-info {
+    height: auto;
+    min-height: 0;
+  }
+
+  .network-diagram-description {
+    -webkit-line-clamp: initial;
+    display: block;
+  }
+}
+
+/* Keep Network Diagrams in true rows instead of Isotope masonry columns. */
+.network-diagram-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  height: auto !important;
+}
+
+.network-diagram-grid .single-item {
+  left: auto !important;
+  position: relative !important;
+  top: auto !important;
+  transform: none !important;
+}
+
+/*----------- SHARED PAGE HERO -----------*/
+
+/* Matching Notion-inspired banner treatment shared by all six pages. */
+.section-page-hero {
+  height: 260px;
+  margin-bottom: 52px;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+}
+
+.section-page-hero-image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+.section-page-icon {
+  bottom: -30px;
+  font-size: 60px;
+  left: 50%;
+  line-height: 1;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-50%);
+  user-select: none;
+  z-index: 2;
+}
+
+@media (max-width: 767.98px) {
+  .section-page-hero {
+    height: 180px;
+    margin-bottom: 44px;
+  }
+
+  .section-page-icon {
+    bottom: -25px;
+    font-size: 50px;
+  }
+}
+
+/*----------- WHITE THEME -----------*/
+
+/* Main page surfaces and typography. */
+body {
+  background-color: #fff;
+  color: #555;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: #222;
+}
+
+hr {
+  border-top-color: #e5e5e5;
+}
+
+.anchor-basic {
+  color: #222 !important;
+}
+
+.anchor-basic:hover,
+.anchor-basic:focus {
+  color: #555 !important;
+}
+
+.lightbox-wrapper,
+.lightbox-wrapper.main-page {
+  background-color: #fff;
+}
+
+/* The animated heading bar needs white cut-outs instead of dark ones. */
+.lightbox-wrapper .lightbox-content .section-heading.page-heading > .animated-bar:before,
+.lightbox-wrapper .lightbox-content .section-heading.page-heading > .animated-bar:after {
+  background-color: #fff;
+}
+
+.lightbox-wrapper .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  background-color: #b8b8b8;
+}
+
+/* Avoid a dark flash while the site is loading or transitioning. */
+.preloader,
+#overlay-effect {
+  background-color: #fff;
+}
+
+.preloader .preloader-block .preloader-icon .loading-dot {
+  background-color: var(--custom, #009e66);
+}
+
+/* Persistent navigation. */
+#navbar {
+  background-color: rgba(255, 255, 255, .97);
+  border-bottom: 1px solid #ededed;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #333;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: var(--custom, #009e66);
+}
+
+@media (max-width: 767.98px) {
+  .navbar .navbar-menu .btn-line,
+  .navbar .navbar-menu:before,
+  .navbar .navbar-menu:after {
+    background-color: #333;
+  }
+
+  .navbar .navbar-collapse .navbar-nav {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+  }
+
+  .navbar .navbar-collapse .navbar-nav .nav-link {
+    color: #444;
+  }
+
+  .navbar .navbar-collapse .navbar-nav .nav-link:hover,
+  .navbar .navbar-collapse .navbar-nav .nav-link:focus {
+    color: var(--custom, #009e66);
+  }
+}
+
+/* Portfolio content. */
+.info-section .info-img img {
+  border-color: #dedede;
+}
+
+.info-section .info-content .content-description p:last-child {
+  border-bottom-color: #e7e7e7;
+}
+
+.info-section .info-content .content-info .single-info > span {
+  color: #333;
+}
+
+.info-section .info-content .content-follow:before {
+  background-color: #d7d7d7;
+}
+
+.info-section .info-content .content-follow li a {
+  color: #666;
+}
+
+/* Documentation cards. */
+.document-card {
+  background-color: #fff;
+  border-color: #dedede;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, .06);
+}
+
+.document-card:hover,
+.document-card:focus {
+  border-color: #b8b8b8;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .09);
+}
+
+.document-preview {
+  background-color: #f4f4f4;
+}
+
+.document-title {
+  color: #222;
+}
+
+.document-meta {
+  color: #777;
+}
+
+/* Network diagram descriptions. */
+.network-diagram-title {
+  color: #222;
+}
+
+.network-diagram-description {
+  color: #666;
+}
+
+/* Photo page copy. */
+.blog-section .single-post .post-content .content-title {
+  color: #222;
+}
+
+.blog-section .single-post .post-content .content-description {
+  color: #666;
+}
+
+/* Contact form and details. */
+.contact-section .contact-form .form-group .form-control {
+  background-color: #f7f7f7;
+  border-bottom-color: #d9d9d9;
+  color: #333;
+}
+
+.contact-section .contact-form .form-group .form-control::-webkit-input-placeholder {
+  color: #888;
+}
+
+.contact-section .contact-form .form-group .form-control::-moz-placeholder {
+  color: #888;
+}
+
+.contact-section .contact-form .form-group .form-control:-ms-input-placeholder {
+  color: #888;
+}
+
+.contact-section .contact-form .form-group .form-control::-ms-input-placeholder {
+  color: #888;
+}
+
+.contact-section .contact-form .form-group .form-control::placeholder {
+  color: #888;
+}
+
+.contact-section .contact-form .form-group .form-control:-webkit-autofill,
+.contact-section .contact-form .form-group .form-control:-webkit-autofill:hover,
+.contact-section .contact-form .form-group .form-control:-webkit-autofill:focus,
+.contact-section .contact-form .form-group .form-control:-webkit-autofill:active {
+  -webkit-text-fill-color: #333 !important;
+  -webkit-box-shadow: 0 0 0 1000px #f7f7f7 inset;
+}
+
+.contact-section .contact-info .list-info .info-details {
+  border-left-color: #dedede;
+}
+
+.contact-section .contact-info .list-info .info-details .info-value a {
+  color: #555 !important;
+}
+
+.contact-section .contact-info .list-info .info-details .info-value a:hover,
+.contact-section .contact-info .list-info .info-details .info-value a:focus {
+  color: var(--custom, #009e66) !important;
+}
+
+/* Keep the PDF viewer focused, but make its actual viewer frame/header light. */
+.pdf-viewer-dialog {
+  background-color: #fff;
+}
+
+.pdf-viewer-header h3 {
+  color: #222;
+}
+
+.pdf-viewer-close {
+  color: #333;
+}
+
+.pdf-viewer-close:focus {
+  outline-color: #aaa;
+}
+
+/*----------- LEFT-ALIGNED PAGE HEADINGS -----------*/
+
+/* Align every main section title and its animated accent bar to the left. */
+.lightbox-wrapper .lightbox-content .section-heading.page-heading {
+  text-align: left;
+}
+
+.lightbox-wrapper .lightbox-content .section-heading.page-heading > .animated-bar {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/*----------- LEFT-ALIGNED PAGE ICONS -----------*/
+
+/* Keep each overlapping page icon aligned with its page heading. */
+.section-page-icon {
+  left: 0;
+  transform: none;
+}
+
+
+/*----------- CUSTOM PAGE ICON IMAGES -----------*/
+
+/* Use the supplied Notion-style artwork instead of system emoji. */
+.page-icon-image {
+  display: block;
+  height: 60px;
+  object-fit: contain;
+  width: 60px;
+}
+
+@media (max-width: 767.98px) {
+  .page-icon-image {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+
+/*----------- PAGE HEADER CONTENT INSET -----------*/
+
+/* Match the Notion-style inset: banner remains full-width, while the icon and title sit in from the left edge. */
+.section-page-icon {
+  left: 70px;
+}
+
+.lightbox-wrapper .lightbox-content .section-heading.page-heading {
+  padding-left: 70px;
+}
+
+@media (max-width: 767.98px) {
+  .section-page-icon {
+    left: 24px;
+  }
+
+  .lightbox-wrapper .lightbox-content .section-heading.page-heading {
+    padding-left: 24px;
+  }
+}
+
+/*----------- ACCENT ABOVE PAGE HEADING -----------*/
+
+/* Keep the animated accent above the title, with no extra top gap. */
+.lightbox-wrapper .lightbox-content .section-heading.page-heading {
+  margin-bottom: 60px;
+}
+
+.lightbox-wrapper .lightbox-content .section-heading.page-heading > .animated-bar {
+  margin: 0 0 8px 0;
+}
+
+.lightbox-wrapper .lightbox-content .section-heading.page-heading > .section-title {
+  margin-bottom: 0;
+}
+
+/*----------- NETWORK DIAGRAM DESCRIPTION SPACING -----------*/
+
+/* Match the Photos card's 13px image-to-title spacing, while keeping diagram images aligned by row. */
+.network-diagram-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 13px;
+}
+
+.network-diagram-description {
+  margin-top: 0;
+}
+
+/*----------- NETWORK DIAGRAM CARD TOP SPACING FIX -----------*/
+
+/* Keep the title/description together at their natural height so the 60px page-heading gap remains visually consistent. */
+.network-diagram-info {
+  display: block;
+  height: auto;
+  padding: 0 2px 13px;
+}
+
+/*----------- PHOTOS FILTERED GALLERY -----------*/
+
+/* Reuse the original Kitzu Portfolio gallery treatment inside the Photos section. */
+.photos-portfolio-section .filter-control {
+  margin-bottom: 16px;
+}
+
+/* The original dark theme used very light filter text; darken it for the white theme. */
+.photos-portfolio-section .filter-control > li {
+  color: #5f5f5f;
+}
+
+.photos-portfolio-section .filter-control > li:hover,
+.photos-portfolio-section .filter-control > li.tab-active {
+  color: var(--custom);
+}
+
+/* Let the seven short filters wrap naturally on narrower screens. */
+.photos-portfolio-section .filter-control {
+  line-height: 2;
+}
+
+/* Keep descriptions entirely inside the hover overlay, as in the original Portfolio gallery. */
+.photos-portfolio-section .portfolio-grid .portfolio-wrapper .item-content {
+  pointer-events: none;
+}
+
+@media (max-width: 575.98px) {
+  .photos-portfolio-section .filter-control > li:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+/*----------- PHOTOS GALLERY THUMBNAIL ALIGNMENT -----------*/
+
+/*
+ * The original Kitzu Portfolio images all use almost the same portrait ratio.
+ * Real portfolio photos vary considerably, so give every thumbnail the same
+ * frame while leaving the full-size lightbox image untouched.
+ */
+.photos-portfolio-section .portfolio-grid .portfolio-wrapper {
+  aspect-ratio: 680 / 727;
+  align-items: stretch;
+}
+
+.photos-portfolio-section .portfolio-grid .portfolio-wrapper > .img-fluid {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+/*----------- PHOTOS HOVER CONTENT CENTERING -----------*/
+
+/* Keep each photo's hover title/action centered in the thumbnail frame. */
+.photos-portfolio-section .portfolio-grid .portfolio-wrapper {
+  align-items: center;
+}
+
+.photos-portfolio-section .portfolio-grid .portfolio-wrapper .item-content {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*----------- PORTFOLIO INTRO LAYOUT -----------*/
+
+/* Give the privacy note a compact sidebar and leave more room for the main introduction. */
+#about .portfolio-intro-row {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.85fr) minmax(0, 2.15fr);
+  column-gap: 64px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#about .portfolio-intro-row > .info-content {
+  flex: none;
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
+}
+
+#about .portfolio-intro-heading {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+#about .portfolio-intro-emoji {
+  flex: 0 0 auto;
+  font-size: 28px;
+  line-height: 1;
+}
+
+#about .portfolio-recommendations {
+  margin-top: 28px;
+}
+
+#about .portfolio-recommendations-title {
+  margin-bottom: 12px;
+}
+
+#about .portfolio-recommendations ul {
+  margin-bottom: 0;
+  padding-left: 22px;
+}
+
+#about .portfolio-recommendations li + li {
+  margin-top: 8px;
+}
+
+@media (max-width: 991.98px) {
+  #about .portfolio-intro-row {
+    display: block;
+  }
+
+  #about .portfolio-security-column {
+    margin-bottom: 34px;
+  }
+}
+
+/*----------- ACCENT BELOW PAGE HEADING -----------*/
+
+/* Keep the compact animated accent, but place it underneath each page title. */
+.lightbox-wrapper .lightbox-content .section-heading.page-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.lightbox-wrapper .lightbox-content .section-heading.page-heading > .section-title {
+  margin-bottom: 8px;
+  order: 1;
+}
+
+.lightbox-wrapper .lightbox-content .section-heading.page-heading > .animated-bar {
+  margin: 0;
+  order: 2;
+}
+
+/*----------- PORTFOLIO INTRO ICONS + SECURITY DIVIDER -----------*/
+
+/* Use the local section icons and remove the old About-template divider from the Security note. */
+#about .portfolio-intro-icon {
+  flex: 0 0 auto;
+  height: 28px;
+  object-fit: contain;
+  width: 28px;
+}
+
+#about .portfolio-security-column .content-description p:last-child {
+  border-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+  #about .portfolio-intro-icon {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+/*----------- PHOTOS ROUNDED CORNERS -----------*/
+
+/* Round each Photos thumbnail and clip the hover overlay to the same shape. */
+.photos-portfolio-section .portfolio-grid .portfolio-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.photos-portfolio-section .portfolio-grid .portfolio-wrapper > .img-fluid {
+  border-radius: inherit;
+}
+
+/* Apply the same rounded treatment to the enlarged Photos lightbox image. */
+.lity-image img {
+  border-radius: 12px;
+}
+
+/*----------- SCRIPTING TABLE -----------*/
+
+#scripting .script-table-wrap {
+  border-top: 1px solid #e5e5e5;
+  overflow-x: visible;
+  width: 100%;
+}
+
+#scripting .script-table {
+  border-collapse: collapse;
+  color: #4a4a4a;
+  font-size: 13px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+#scripting .script-table th,
+#scripting .script-table td {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 11px 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#scripting .script-table th {
+  color: #777;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Four-column layout: enough room for names/descriptions while keeping links separate. */
+#scripting .script-table th:nth-child(1),
+#scripting .script-table td:nth-child(1) {
+  width: 27%;
+}
+
+#scripting .script-table th:nth-child(2),
+#scripting .script-table td:nth-child(2) {
+  width: 24%;
+}
+
+#scripting .script-table th:nth-child(3),
+#scripting .script-table td:nth-child(3),
+#scripting .script-table th:nth-child(4),
+#scripting .script-table td:nth-child(4) {
+  width: 24.5%;
+}
+
+/* Script names always remain on a single line. */
+#scripting .script-table td:nth-child(1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#scripting .script-name-icon {
+  align-items: center;
+  background: #2f8fbe;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-flex;
+  font-family: monospace;
+  font-size: 9px;
+  font-weight: 700;
+  height: 17px;
+  justify-content: center;
+  margin-right: 8px;
+  vertical-align: 1px;
+  width: 22px;
+}
+
+/* Prevent URL columns from colliding with each other. */
+#scripting .script-table td:nth-child(3),
+#scripting .script-table td:nth-child(4) {
+  overflow: hidden;
+}
+
+#scripting .script-url {
+  color: #555;
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-decoration: underline;
+  text-decoration-color: #c9c9c9;
+  text-overflow: ellipsis;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+#scripting .script-url:hover {
+  color: var(--custom);
+  text-decoration-color: var(--custom);
+}
+
+#scripting .script-output-note {
+  color: #555;
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Sortable column headers. */
+#scripting .script-sortable {
+  cursor: pointer;
+  padding-right: 22px;
+  position: relative;
+  user-select: none;
+}
+
+#scripting .script-sortable::after {
+  color: #aaa;
+  content: "↕";
+  font-size: 10px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#scripting .script-sortable[aria-sort="ascending"]::after {
+  color: var(--custom);
+  content: "↑";
+}
+
+#scripting .script-sortable[aria-sort="descending"]::after {
+  color: var(--custom);
+  content: "↓";
+}
+
+#scripting .script-sortable:focus-visible {
+  outline: 2px solid var(--custom);
+  outline-offset: -2px;
+}
+
+@media (max-width: 991.98px) {
+  #scripting .script-table {
+    font-size: 12px;
+  }
+
+  #scripting .script-table th,
+  #scripting .script-table td {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  #scripting .script-name-icon {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #scripting .script-table {
+    font-size: 11px;
+  }
+
+  #scripting .script-table th {
+    font-size: 10px;
+  }
+
+  #scripting .script-table th,
+  #scripting .script-table td {
+    padding: 9px 5px;
+  }
+
+  #scripting .script-table th:nth-child(1),
+  #scripting .script-table td:nth-child(1) {
+    width: 29%;
+  }
+
+  #scripting .script-table th:nth-child(2),
+  #scripting .script-table td:nth-child(2) {
+    width: 27%;
+  }
+
+  #scripting .script-table th:nth-child(3),
+  #scripting .script-table td:nth-child(3),
+  #scripting .script-table th:nth-child(4),
+  #scripting .script-table td:nth-child(4) {
+    width: 22%;
+  }
+}
+
+/*----------- INDIVIDUAL PAGE HEADER IMAGE POSITIONING -----------*/
+/* Adjust the SECOND percentage to move the visible crop up/down.  */
+/* Lower value = show more of the top. Higher value = show more of the bottom. */
+
+/* Portfolio */
+#about .section-page-hero-image {
+  object-position: 50% 50%;
+}
+
+/* Documentation */
+#resume .section-page-hero-image {
+  object-position: 50% 0%;
+}
+
+/* Network Diagrams */
+#portfolio .section-page-hero-image {
+  object-position: 50% 50%;
+}
+
+/* Photos */
+#blog .section-page-hero-image {
+  object-position: 50% 50%;
+}
+
+/* Scripting */
+#scripting .section-page-hero-image {
+  object-position: 50% 50%;
+}
+
+/* Contact */
+#contact .section-page-hero-image {
+  object-position: 50% 20%;
+}

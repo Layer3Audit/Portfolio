@@ -760,7 +760,7 @@ hr {
 /*----------- PORTFOLIO INTRO LAYOUT -----------*/
 
 /* Give the privacy note a compact sidebar and leave more room for the main introduction. */
-#about .portfolio-intro-row {
+#portfolio .portfolio-intro-row {
   display: grid;
   grid-template-columns: minmax(240px, 0.85fr) minmax(0, 2.15fr);
   column-gap: 64px;
@@ -768,7 +768,7 @@ hr {
   margin-right: 0;
 }
 
-#about .portfolio-intro-row > .info-content {
+#portfolio .portfolio-intro-row > .info-content {
   flex: none;
   max-width: none;
   padding-left: 0;
@@ -776,41 +776,41 @@ hr {
   width: auto;
 }
 
-#about .portfolio-intro-heading {
+#portfolio .portfolio-intro-heading {
   align-items: center;
   display: flex;
   gap: 12px;
 }
 
-#about .portfolio-intro-emoji {
+#portfolio .portfolio-intro-emoji {
   flex: 0 0 auto;
   font-size: 28px;
   line-height: 1;
 }
 
-#about .portfolio-recommendations {
+#portfolio .portfolio-recommendations {
   margin-top: 28px;
 }
 
-#about .portfolio-recommendations-title {
+#portfolio .portfolio-recommendations-title {
   margin-bottom: 12px;
 }
 
-#about .portfolio-recommendations ul {
+#portfolio .portfolio-recommendations ul {
   margin-bottom: 0;
   padding-left: 22px;
 }
 
-#about .portfolio-recommendations li + li {
+#portfolio .portfolio-recommendations li + li {
   margin-top: 8px;
 }
 
 @media (max-width: 991.98px) {
-  #about .portfolio-intro-row {
+  #portfolio .portfolio-intro-row {
     display: block;
   }
 
-  #about .portfolio-security-column {
+  #portfolio .portfolio-security-column {
     margin-bottom: 34px;
   }
 }
@@ -838,19 +838,19 @@ hr {
 /*----------- PORTFOLIO INTRO ICONS + SECURITY DIVIDER -----------*/
 
 /* Use the local section icons and remove the old About-template divider from the Security note. */
-#about .portfolio-intro-icon {
+#portfolio .portfolio-intro-icon {
   flex: 0 0 auto;
   height: 28px;
   object-fit: contain;
   width: 28px;
 }
 
-#about .portfolio-security-column .content-description p:last-child {
+#portfolio .portfolio-security-column .content-description p:last-child {
   border-bottom: 0;
 }
 
 @media (max-width: 991.98px) {
-  #about .portfolio-intro-icon {
+  #portfolio .portfolio-intro-icon {
     height: 24px;
     width: 24px;
   }
@@ -1063,22 +1063,22 @@ hr {
 /* Lower value = show more of the top. Higher value = show more of the bottom. */
 
 /* Portfolio */
-#about .section-page-hero-image {
-  object-position: 50% 50%;
-}
-
-/* Documentation */
-#resume .section-page-hero-image {
-  object-position: 50% 0%;
-}
-
-/* Network Diagrams */
 #portfolio .section-page-hero-image {
   object-position: 50% 50%;
 }
 
+/* Documentation */
+#documentation .section-page-hero-image {
+  object-position: 50% 0%;
+}
+
+/* Network Diagrams */
+#networkdiagrams .section-page-hero-image {
+  object-position: 50% 50%;
+}
+
 /* Photos */
-#blog .section-page-hero-image {
+#photos .section-page-hero-image {
   object-position: 50% 50%;
 }
 

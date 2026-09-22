@@ -68,7 +68,7 @@
 
     responsiveColumns([
       [
-        ['#about', '.services-section .single-service', null],
+        ['#portfolio', '.services-section .single-service', null],
         [{
             matchMedia: '(max-width: 767.98px)',
             columns: 1,
@@ -84,7 +84,7 @@
         'rc-mb-0'
       ],
       [
-        ['#about', '.pricing-section .single-plan', null],
+        ['#portfolio', '.pricing-section .single-plan', null],
         [{
           matchMedia: '(max-width: 991.98px)',
           columns: 1,
@@ -95,7 +95,7 @@
         'rc-mb-0'
       ],
       [
-        ['#portfolio', '.portfolio-section .single-item .portfolio-item', '.portfolio-wrapper'],
+        ['#networkdiagrams', '.portfolio-section .single-item .portfolio-item', '.portfolio-wrapper'],
         [{
           matchMedia: '(max-width: 991.98px)',
           columns: 2,
@@ -106,7 +106,7 @@
         'rc-mb-0'
       ],
       [
-        ['#blog', '.blog-section .single-post', null],
+        ['#photos', '.blog-section .single-post', null],
         [{
           matchMedia: '(max-width: 991.98px)',
           columns: 1,
@@ -264,9 +264,9 @@
 
     /*----------  About: Testimonials  ----------*/
 
-    ifExists('#about .testimonials-section', function() {
+    ifExists('#portfolio .testimonials-section', function() {
       var testimonials = tns({
-        container: '#about .testimonials-section .my-slider',
+        container: '#portfolio .testimonials-section .my-slider',
         items: 2,
         gutter: 30,
         "responsive": {
@@ -292,9 +292,9 @@
 
     /*----------  Resume: Skills  ----------*/
 
-    ifExists('#resume .skills-section', function() {
+    ifExists('#documentation .skills-section', function() {
       var initPercentageElement = function() {
-        $('#resume .skills-section .single-skill').each(function() {
+        $('#documentation .skills-section .single-skill').each(function() {
           var percentage = Math.min(100, Math.max(0, $(this).data('percentage')));
           var barWidth = $(this).find('.skill-progress').outerWidth(true);
           var percentageElementOffset = barWidth - (barWidth * (percentage / 100));
@@ -310,13 +310,13 @@
 
     /*----------  Portfolio: Portfolio  ----------*/
 
-    ifExists('#portfolio .portfolio-section', function() {
+    ifExists('#networkdiagrams .portfolio-section', function() {
       /* Setup Isotope */
-      var grid = $('#portfolio .portfolio-section .portfolio-grid');
-      var filters = $('#portfolio .portfolio-section .filter-control li');
+      var grid = $('#networkdiagrams .portfolio-section .portfolio-grid');
+      var filters = $('#networkdiagrams .portfolio-section .filter-control li');
       grid.imagesLoaded(function() {
         grid.isotope({
-          itemSelector: '#portfolio .portfolio-section .single-item',
+          itemSelector: '#networkdiagrams .portfolio-section .single-item',
           masonry: {
             horizontalOrder: true
           }

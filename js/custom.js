@@ -107,7 +107,7 @@
       if (immediate || !$current.length) {
         $sections.removeClass('is-active is-fading-out is-transition-target');
         $target.addClass('is-active');
-        if (sectionId === '#blog') {
+        if (sectionId === '#photos') {
           window.setTimeout(layoutPhotoGrid, 0);
         }
         return;
@@ -127,7 +127,7 @@
         window.requestAnimationFrame(function() {
           window.requestAnimationFrame(function() {
             $target.removeClass('is-transition-target').addClass('is-active');
-            if (sectionId === '#blog') {
+            if (sectionId === '#photos') {
               window.setTimeout(layoutPhotoGrid, 0);
             }
 
@@ -180,8 +180,8 @@
     });
 
     /* Photos: original Portfolio-style filtered gallery. */
-    var $photoGrid = $('#blog .photos-portfolio-section .portfolio-grid');
-    var $photoFilters = $('#blog .photos-portfolio-section .filter-control li');
+    var $photoGrid = $('#photos .photos-portfolio-section .portfolio-grid');
+    var $photoFilters = $('#photos .photos-portfolio-section .filter-control li');
 
     function layoutPhotoGrid() {
       if ($photoGrid.length && $photoGrid.data('isotope')) {
@@ -192,7 +192,7 @@
     if ($photoGrid.length) {
       $photoGrid.imagesLoaded(function() {
         $photoGrid.isotope({
-          itemSelector: '#blog .photos-portfolio-section .single-item',
+          itemSelector: '#photos .photos-portfolio-section .single-item',
           masonry: {
             horizontalOrder: true
           }
@@ -212,7 +212,7 @@
 
     var initialSection = window.location.hash;
     if (!initialSection || !$(initialSection).hasClass('lightbox-wrapper')) {
-      initialSection = '#about';
+      initialSection = '#portfolio';
     }
 
     showSection(initialSection, true);

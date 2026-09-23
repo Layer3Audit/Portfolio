@@ -1091,3 +1091,14 @@ hr {
 #contact .section-page-hero-image {
   object-position: 50% 20%;
 }
+
+/* =========================================================
+   MOBILE / OLDER BROWSER VIEWPORT HEIGHT FIX
+   main.js sets --vh from window.innerHeight so fixed sections
+   use the actually visible viewport rather than mobile 100vh.
+   ========================================================= */
+.lightbox-wrapper,
+.lightbox-wrapper.main-page {
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: 0;
+}
